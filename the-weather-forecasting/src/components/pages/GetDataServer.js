@@ -1,53 +1,83 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 function GetDataServer() {
-  const [sensorData, setSensorData] = useState([]);
-  const [errorMessage, setErrorMessage] = useState(null);
+    const [sensorData, setSensorData] = useState([]);
+    const [errorMessage, setErrorMessage] = useState(null);
 
-  useEffect(() => {
-    fetchSensorData();
-  }, []);
+    useEffect(() => {
+        fetchSensorData();
+    }, []);
 
-  const fetchSensorData = () => {
-    axios
-      .get("http://www.ihubiitmandi.in/iot_dashboard/getSensorData.php")
-      .then((response) => {
-        const data = response.data;
+    const fetchSensorData = () => {
+        axios.get('http://www.ihubiitmandi.in/iot_dashboard/getSensorData.php')
+        .then(response => {
+            const data = response.data;
 
-        if (response.status !== 200) {
-          console.log(data);
-          throw new Error(data.message || "Error fetching data");
-        }
+            if (response.status !== 200) {
+                console.log(data);
+                throw new Error(data.message || 'Error fetching data');
+            }
 
-        setSensorData(data);
-      })
-      .catch((error) => {
-        setErrorMessage(error.toString());
-        console.error("There was an error!", error);
-      });
-  };
+            setSensorData(data);
+        })
+        .catch(error => {
+            setErrorMessage(error.toString());
+            console.error('There was an error!', error);
+        });
+    };
 
-  return (
-    <div>
-      {errorMessage ? (
-        <div>Error: {errorMessage}</div>
-      ) : (
-        <ul>
-          {sensorData.map((sensor) => (
-            <li key={sensor.id}>
-              Temperature: {sensor.temperature}, Pressure: {sensor.pressure},
-              Humidity: {sensor.humidity}, Gas: {sensor.gas}, Reading Time:{" "}
-              {sensor.reading_time}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+    return (
+        <div>
+            {errorMessage ? (
+                <div>Error: {errorMessage}</div>
+            ) : (
+                <ul>
+                    {sensorData.map(sensor => (
+                        <li key={sensor.id}>
+                            Temperature: {sensor.temperature}, Pressure: {sensor.pressure}, Humidity: {sensor.humidity}, Gas: {sensor.gas}, Reading Time: {sensor.reading_time}
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    );
 }
 
 export default GetDataServer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // import React, { Component } from 'react';
 
@@ -69,7 +99,7 @@ export default GetDataServer;
 //         fetch('https://www.ihubiitmandi.in/iot_dashboard/getSensorData.php')
 //             .then(async response => {
 //                 const data = await response.json();
-
+                
 //                 // check for error response
 //                 if (response.ok) {
 //                     console.log(data);
@@ -109,6 +139,7 @@ export default GetDataServer;
 
 // export default GetDataServer;
 
+
 // import axios from 'axios';
 // import React, { useEffect, useState } from 'react';
 
@@ -120,13 +151,14 @@ export default GetDataServer;
 //         fetchSensorData();
 //     }, []);
 
+
 //     axios({
 //         url:'http://www.ihubiitmandi.in/iot_dashboard/getSensorData.php',
 //         method:"GET",
 //         mode: 'no-cors',
 //         headers:{
 //             "Content-Type": "application/json",
-
+           
 //             "Access-Control-Request-Headers": 'Content-Type, Authorization'
 
 //         }
@@ -137,6 +169,7 @@ export default GetDataServer;
 //     .catch(err =>{
 //         console.log(err);
 //     })
+
 
 //     const fetchSensorData = () => {
 //         axios.get('http://www.ihubiitmandi.in/iot_dashboard/getSensorData.php')
