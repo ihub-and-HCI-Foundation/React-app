@@ -28,7 +28,7 @@ const ComfortZoneWeather = ({ detailsData }) => {
   }, []);
 
   return (
-    <Grid container sx={{ padding: "3rem 0rem 0rem" }}>
+    <Grid container sx={{ padding: "6rem 0rem 2rem" }}>
       <Typography
         variant="h4"
         component="h4"
@@ -41,7 +41,9 @@ const ComfortZoneWeather = ({ detailsData }) => {
         }}
       ></Typography>
       <br />
-      <Details data={detailsData} /> {/* Using the Details component */}
+      <Details data={detailsData} />
+      {/* Using the Details component */}
+      <br />
       <Typography
         variant="h4"
         component="h4"
@@ -50,12 +52,13 @@ const ComfortZoneWeather = ({ detailsData }) => {
           color: "rgba(255,255,255, .85)",
           fontFamily: "Poppins",
           textAlign: "center",
-          marginBottom: "2rem",
-          marginTop: "2rem", // Add some margin-top for spacing
+          justifyContent: "space-between",
+          marginBottom: "6rem",
+          marginTop: "3rem", // Add some margin-top for spacing
         }}
       ></Typography>
-      <br />
       <Layout title="Air Conditions" />
+      <br />
       <ComfortZoneAirConditions data={airConditions} />
     </Grid>
   );

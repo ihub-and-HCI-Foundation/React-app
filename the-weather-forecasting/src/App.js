@@ -203,7 +203,7 @@ function App() {
                 lineHeight: "22px",
               }}
             >
-              Your Comfort Zone Monitor: Room Temperature Dashboard:
+              <h1>Your Comfort Zone Monitor: Room Temperature Dashboard:</h1>
             </Typography>
           </Box>
           <Box
@@ -211,7 +211,7 @@ function App() {
               maxWidth: { xs: "95%", sm: "80%", md: "1100px" },
               width: "100%",
               height: "100%",
-              margin: "20px auto",
+              margin: "40px auto",
               padding: "1rem 0 3rem",
               borderRadius: {
                 xs: "none",
@@ -219,7 +219,7 @@ function App() {
               },
               flexGrow: "1",
               marginTop: "4",
-              marginBottom: "4",
+              marginBottom: "8",
               boxShadow: {
                 xs: "none",
                 sm: "rgba(255, 204, 255, 0.5) 12px 10px 15px 10px, rgba(255, 204, 255, 0.5) 12px 4px 10px 10px",
@@ -229,12 +229,11 @@ function App() {
             <Grid
               container
               columnSpacing={2}
-              justify="space-around"
+              justify="space-between"
               spacing={3}
             >
-              <Grid item xs={12}>
-                <ComfortZoneWeather detailsData={todayWeather} />{" "}
-                {/* Pass the weather data here */}
+              <Grid item xs={16}>
+                <ComfortZoneWeather detailsData={todayWeather} /> {}
               </Grid>
             </Grid>
           </Box>
