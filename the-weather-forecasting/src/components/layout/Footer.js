@@ -1,10 +1,10 @@
-import React from 'react';
 import {
-  MDBFooter,
-  MDBContainer,
   MDBCol,
+  MDBContainer,
+  MDBFooter,
   MDBRow,
 } from 'mdb-react-ui-kit';
+import React from 'react';
 
 export default function Footer() {
   return (
@@ -23,54 +23,54 @@ export default function Footer() {
           </MDBCol>
 
           <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase'>Quick Links</h5>
+            <h5 className='text-uppercase'>Our Company</h5>
 
             <ul className='list-unstyled mb-0'>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 1
+                  About Us
                 </a>
               </li>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 2
+                  Contact Us
                 </a>
               </li>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 3
+                  Newsletter
                 </a>
               </li>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 4
+                  Procurement Policy
                 </a>
               </li>
             </ul>
           </MDBCol>
 
           <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase mb-0'>Quick Links</h5>
+            <h5 className='text-uppercase mb-0'>Updates</h5>
 
             <ul className='list-unstyled'>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 1
+                  News
                 </a>
               </li>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 2
+                  Tenders
                 </a>
               </li>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 3
+                  Audit Reports
                 </a>
               </li>
               <li>
                 <a href='#!' className='text-white'>
-                  Link 4
+                  Startups
                 </a>
               </li>
             </ul>

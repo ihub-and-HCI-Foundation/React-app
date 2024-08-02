@@ -14,15 +14,15 @@ function Menubar() {
             <img
               src='https://www.ihubiitmandi.in/wp-content/uploads/2023/10/z.png'
               width="90"
-              height="80"
+              height="90"
               className="d-inline-block align-top"
               alt="logo"
             />
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="/GetDataServer.js">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/GetDataServer.js">Home</Nav.Link>
+            <Nav.Link href="/GetDataServer.js">Graph</Nav.Link>
+            <Nav.Link href="#pricing">About us</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
