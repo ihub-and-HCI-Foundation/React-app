@@ -140,7 +140,7 @@ function GetDataServer() {
     useEffect(() => {
         // Function to fetch sensor data
         const fetchSensorData = () => {
-            fetch('http://www.ihubiitmandi.in/iot_dashboard/getSensorData.php', {
+            fetch('/iot_dashboard/getSensorData.php', {
                 method: 'GET',
                 mode: 'no-cors' // Set mode to 'no-cors'
             })
