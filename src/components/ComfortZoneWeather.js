@@ -1,9 +1,9 @@
 // src/components/ComfortZoneWeather.js
-import React, { useState, useEffect } from "react";
 import { Grid, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
 import ComfortZoneAirConditions from "./ComfortZoneAirConditions";
-import Details from "./TodayWeather/Details/Details";
 import Layout from "./Reusable/Layout";
+import Details from "./TodayWeather/Details/Details";
 
 const ComfortZoneWeather = ({ detailsData }) => {
   const [airConditions, setAirConditions] = useState({
@@ -14,7 +14,7 @@ const ComfortZoneWeather = ({ detailsData }) => {
   });
 
   useEffect(() => {
-    fetch("https://ihubiitmandi.in/iot_dashboard/getSensorData.php")
+    fetch("iot_dashboard/getSensorData.php")
       .then((response) => response.json())
       .then((data) => {
         const latestData = data[0];

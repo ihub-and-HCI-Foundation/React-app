@@ -1,8 +1,8 @@
-import { Box, Grid, SvgIcon } from '@mui/material';
-import React from 'react';
-import ThermostatIcon from '@mui/icons-material/Thermostat';
 import AirIcon from '@mui/icons-material/Air';
 import FilterDramaIcon from '@mui/icons-material/FilterDrama';
+import ThermostatIcon from '@mui/icons-material/Thermostat';
+import { Box, Grid, SvgIcon } from '@mui/material';
+import React from 'react';
 import { ReactComponent as HumidityIcon } from '../../../assets/humidity.svg';
 
 const AirConditionsItem = (props) => {
